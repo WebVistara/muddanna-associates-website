@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Practice Areas | Muddanna Associates</title>
+    <link rel="icon" type="image/x-icon" href="images\Muddanna Associated Logo(1)-Photoroom.webp">
+    <!-- SEO meta -->
+    <meta name="description"
+        content="Explore our comprehensive legal services: Criminal, Civil, Family, Corporate, Cyber Crime, Arbitration and more. Expert advocacy in India.">
+    <meta name="keywords"
+        content="law firm practice areas, criminal lawyer, corporate law, family law, cyber crime lawyer, arbitration">
+    <!-- Tailwind + fontawesome + google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        /* animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgb(255, 106, 0);
+            border-bottom: 4px solid transparent;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-bottom-color: #C5A059;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-bottom: 1rem;
+        }
+
+        .btn-consult {
+            background-color: #C5A059;
+            color: #0A2342;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            display: inline-block;
+            transition: all 0.3s;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .btn-consult:hover {
+            background-color: #0A2342;
+            color: white;
+        }
+
+        .footer-link {
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #C5A059;
+            transform: translateX(3px);
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #C5A059;
+        }
+
+        
+          .logo {
+  width: 130px;
+  height: 90px;
+}
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 relative">
+
+    
+        <a href="tel:+9109060643224"
+            class="fixed bottom-24 right-6 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+            aria-label="Call Now">
+        
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    <!-- floating whatsapp button -->
+    <a href="https://wa.me/9109060643224?text=Hello%20I%20need%20legal%20consultation" target="_blank"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation (same as main site) -->
+    <nav class="bg-navy text-white sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="index.html">
+            <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+        </a>
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                <a href="index.html" class="hover-gold transition">Home</a>
+                <a href="about.html" class="hover-gold transition">About</a>
+                <a href="practice.html" class="border-b-2 border-gold text-gold transition">Practice</a>
+                <a href="our_team.html" class="hover-gold transition">Team</a>
+                <a href="cases.html" class="hover-gold transition">Cases</a>
+                <a href="blog.html" class="hover-gold transition">Blog</a>
+                <a href="testimonials.html" class="hover-gold transition">Testimonials</a>
+                <a href="FAQ.html" class="hover-gold transition">Resources</a>
+                <a href="consult.html" class="hover-gold transition">Consult</a>
+                <a href="contact.html" class="hover-gold transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- mobile menu (hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 px-4 pb-4 flex flex-col space-y-2 text-sm uppercase">
+            <a href="index.html" class="py-1" onclick="closeMobile()">Home</a>
+            <a href="about.html" class="py-1" onclick="closeMobile()">About</a>
+            <a href="practice.html" class="py-1 text-gold" onclick="closeMobile()">Practice</a>
+            <a href="our_team.html" class="py-1" onclick="closeMobile()">Team</a>
+            <a href="cases.html" class="py-1" onclick="closeMobile()">Cases</a>
+            <a href="blog.html" class="py-1" onclick="closeMobile()">Blog</a>
+            <a href="testimonials.html" class="py-1" onclick="closeMobile()">Testimonials</a>
+            <a href="FAQ.html" class="py-1" onclick="closeMobile()">Resources</a>
+            <a href="consult.html" class="py-1" onclick="closeMobile()">Consult</a>
+            <a href="contact.html" class="py-1" onclick="closeMobile()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Practice Areas Content -->
+    <main>
+        <!-- Hero section -->
+        <section class="bg-navy text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('images/law_firm_law.avif'); background-size: cover; background-position: center;">
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 fade-up">Practice Areas</h1>
+                <p class="text-xl max-w-2xl mx-auto fade-up" style="animation-delay:0.2s">Comprehensive legal expertise
+                    across diverse domains</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Property Related Suits -->
+            <div class="service-card p-6 fade-up">
+                <i class="fas fa-home service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Property Related Suits</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Suit for Declaration</li>
+                        <li>Suit for Permanent Injunction</li>
+                        <li>Suit for Mandatory Injunction</li>
+                        <li>Suit for Possession</li>
+                        <li>Suit for Partition and Separate Possession</li>
+                        <li>Suit for Specific Performance of Contract</li>
+                        <li>Suit for Cancellation of Sale Deed / Agreement</li>
+                        <li>Suit for Easement Rights</li>
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+    
+            <!-- Money Related Suits -->
+            <div class="service-card p-6 fade-up" style="animation-delay:0.05s">
+                <i class="fas fa-rupee-sign service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Money Related Suits</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Money Recovery Suit</li>
+                        <li>Summary Suit under Order XXXVII CPC</li>
+                        <li>Suit for Damages / Compensation</li>
+                        <li>Suit for Recovery based on Promissory Note or Agreement</li>
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+    
+            <!-- Contract Related Suits -->
+            <div class="service-card p-6 fade-up" style="animation-delay:0.1s">
+                <i class="fas fa-file-signature service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Contract Related Suits</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Suit for Breach of Contract</li>
+                        <li>Suit for Specific Performance</li>
+                        <li>Suit for Refund of Advance Amount</li>
+                        <li>Suit for Enforcement of Agreement</li>
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+    
+            <!-- Family Matters -->
+            <div class="service-card p-6 fade-up" style="animation-delay:0.15s">
+                <i class="fas fa-users service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Family Matters</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Divorce Petition</li>
+                        <li>Restitution of Conjugal Rights</li>
+                        <li>Maintenance Petition</li>
+                        <li>Child Custody Petition</li>
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+    
+            <!-- Other Civil Proceedings -->
+            <div class="service-card p-6 fade-up" style="animation-delay:0.2s">
+                <i class="fas fa-gavel service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Other Civil Proceedings</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Probate and Succession Cases</li>
+                        <li>Guardianship Petition</li>
+                        <li>Execution Petition</li>
+                        <li>Caveat Petition</li>
+                        <li>Consumer Cases</li>
+                        <li>Cheque Bounce</li>
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+    
+            <!-- Criminal Cases -->
+            <div class="service-card p-6 fade-up" style="animation-delay:0.25s">
+                <i class="fas fa-balance-scale service-icon"></i>
+                <h3 class="text-2xl font-serif font-bold text-navy mb-3">Criminal Cases</h3>
+                <div class="mb-4 text-sm text-gray-700">
+                    <span class="font-semibold">Legal support offered:</span>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Bail applications & anticipatory bail</li>
+                        <li>Trial advocacy & appeals</li>
+                        <li>Quashing of FIRS</li>
+                        <li>Expert legal advice</li>
+                        
+                    </ul>
+                </div>
+                <a href="consult.html" class="btn-consult">Consult →</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Image section (optional) -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-serif font-bold text-navy mb-8">We cover every aspect of law</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <img src="images/court_room.webp"
+                        alt="Courtroom" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                    <img src="images/law_firm_lawbooks.avif"
+                        alt="Law books" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                    <img src="images/FIR_law_firm.webp"
+                        alt="Consultation" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-gold text-navy py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-3xl font-serif font-bold mb-4">Need legal assistance?</h3>
+                <p class="text-lg mb-8">Our experienced team is ready to help you navigate complex legal challenges.</p>
+                <a href="consult.html"
+                    class="inline-block bg-navy text-white px-8 py-3 font-semibold rounded hover:bg-white hover:text-navy transition duration-300">Schedule
+                    a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as improved professional footer) -->
+    <!-- Footer (same as improved professional footer) -->
+    <footer class="bg-navy text-white pt-12 pb-4 mt-8">
+        <div class="container mx-auto px-4">
+            <!-- Top border accent -->
+            <div class="w-24 h-1 bg-gold mb-8 mx-auto md:mx-0"></div>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Left: company name with logo -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <a href="index.html">
+                            <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+                        </a>
+                    </div>
+                <p class="text-sm text-gray-300 leading-relaxed">Trusted legal expertise since 2019.
+                </p>
+                <p class="text-sm text-gray-300 leading-relaxed">Civil cases and others.</p>
+                </div>
+    
+                <!-- Middle: quick links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold relative inline-block pb-2 footer-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-sm mt-4">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link">About</a></li>
+                        <li><a href="practice.html" class="footer-link">Practice</a></li>
+                        <li><a href="our_team.html" class="footer-link">Team</a></li>
+                        <li><a href="cases.html" class="footer-link">Cases</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="FAQ.html" class="footer-link">Resources</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Right: contact info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold footer-heading inline-block mb-4">Get in touch</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start justify-center md:justify-start"><i
+                                class="fas fa-map-marker-alt gold mt-1 mr-3"></i>
+                            <span>Muddanna Associates,Muddanna Building, Sir M V Layout 7th Block,Muddayanapalya, Bengaluru,
+                                Karnataka-560091</span>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-phone-alt gold mr-3"></i> +91
+                            090606 43224</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-envelope gold mr-3"></i>
+                            muddannaassociates@gmail.com</p>
+                        <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                            Monday - Saturday: 5:00PM- 9:00PM
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                            Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Social links -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+    
+            <!-- Credit row -->
+            <div class="border-t border-gray-700 pt-6 text-center footer-credit">
+                <p>© 2025 Muddanna Associates. All Rights Reserved | Designed & Developed by <a
+                        href="https://www.webvistara.co.in/" target="_blank" class="hover:text-gold"
+                        style="color: #C5A059;">
+                        Web Vistara
+                    </a>
+                </p>
+    
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Disclaimer hidden page (for direct link) -->
+    <section id="disclaimer" style="display: none;">Disclaimer content same as modal.</section>
+
+    <script>
+        // Disclaimer functions
+        function acceptDisclaimer() {
+            document.getElementById('disclaimerModal').classList.add('disclaimer-hidden');
+            localStorage.setItem('disclaimerAccepted', 'true');
+        }
+        function showDisclaimer() {
+            document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+        }
+
+        // Check if disclaimer already accepted
+        window.onload = function () {
+            if (!localStorage.getItem('disclaimerAccepted')) {
+                document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+            }
+        };
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        function closeMobile() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+    </script>
+    <style>
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .footer-heading {
+            position: relative;
+        }
+    </style>
+</body>
+
+</html>

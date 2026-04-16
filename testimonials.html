@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Testimonials | Muddanna Associates</title>
+    <link rel="icon" type="image/x-icon" href="images/Muddanna Associated Logo(1)-Photoroom.webp">
+    <!-- SEO meta -->
+    <meta name="description"
+        content="Read what our clients say about Muddanna Associates. Genuine feedback, ratings, and Google reviews.">
+    <meta name="keywords" content="law firm testimonials, client reviews, legal feedback, Google reviews">
+    <!-- Tailwind + fontawesome + google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        /* animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Professional testimonial card - unified dark blue theme */
+        .testimonial-card {
+            background: linear-gradient(145deg, #0A2342, #102B4E);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            width: 340px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(0px);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.35);
+            border-color: #C5A059;
+            background: linear-gradient(145deg, #0C2A4A, #12335B);
+        }
+
+        .stars {
+            color: #C5A059;
+            margin-bottom: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .stars i {
+            margin-right: 3px;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            color: #F0F4FA;
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .client-name {
+            color: #C5A059;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            letter-spacing: 0.3px;
+            border-top: 1px dashed rgba(197, 160, 89, 0.4);
+            padding-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* Marquee animation - smoother, mask removed per request */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            /* Removed white fade / mask animation on both sides */
+            mask-image: none;
+            -webkit-mask-image: none;
+            padding: 1.5rem 0 2rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+            animation: marquee 48s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .btn-consult {
+            background-color: #C5A059;
+            color: #0A2342;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-consult:hover {
+            background-color: #0A2342;
+            color: white;
+        }
+
+        .footer-link {
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #C5A059;
+            transform: translateX(3px);
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #C5A059;
+        }
+
+        .logo {
+            width: 130px;
+            height: 90px;
+
+        }
+
+        /* Google review card - professional dark blue premium look */
+        .google-review-card {
+            background: #0A2342;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .google-review-card:hover {
+            transform: translateY(-5px);
+            border-color: #C5A059;
+        }
+
+        .gold-btn {
+            background-color: #C5A059;
+            color: #0A2342;
+            font-weight: 600;
+            transition: all 0.25s;
+        }
+
+        .gold-btn:hover {
+            background-color: #D4B06A;
+            color: #0A1A2F;
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.4);
+        }
+
+        /* disclaimer modal style - matching theme */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(10, 35, 66, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .disclaimer-card {
+            background: linear-gradient(135deg, #0A2342, #122F55);
+            max-width: 500px;
+            width: 90%;
+            border-radius: 2rem;
+            border: 1px solid #C5A059;
+            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 relative">
+
+    <!-- Floating call and whatsapp buttons -->
+    <a href="tel:+9109060643224"
+        class="fixed bottom-24 right-6 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Call Now">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://wa.me/9109060643224?text=Hello%20I%20need%20legal%20consultation" target="_blank"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation (consistent) -->
+    <nav class="bg-navy text-white sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                <a href="index.html" class="hover-gold transition">Home</a>
+                <a href="about.html" class="hover-gold transition">About</a>
+                <a href="practice.html" class="hover-gold transition">Practice</a>
+                <a href="our_team.html" class="hover-gold transition">Team</a>
+                <a href="cases.html" class="hover-gold transition">Cases</a>
+                <a href="blog.html" class="hover-gold transition">Blog</a>
+                <a href="testimonials.html" class="border-b-2 border-gold text-gold transition">Testimonials</a>
+                <a href="FAQ.html" class="hover-gold transition">Resources</a>
+                <a href="consult.html" class="hover-gold transition">Consult</a>
+                <a href="contact.html" class="hover-gold transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 px-4 pb-4 flex flex-col space-y-2 text-sm uppercase">
+            <a href="index.html" class="py-1" onclick="closeMobile()">Home</a>
+            <a href="about.html" class="py-1" onclick="closeMobile()">About</a>
+            <a href="practice.html" class="py-1" onclick="closeMobile()">Practice</a>
+            <a href="our_team.html" class="py-1" onclick="closeMobile()">Team</a>
+            <a href="cases.html" class="py-1" onclick="closeMobile()">Cases</a>
+            <a href="blog.html" class="py-1" onclick="closeMobile()">Blog</a>
+            <a href="testimonials.html" class="py-1 text-gold" onclick="closeMobile()">Testimonials</a>
+            <a href="FAQ.html" class="py-1" onclick="closeMobile()">Resources</a>
+            <a href="consult.html" class="py-1" onclick="closeMobile()">Consult</a>
+            <a href="contact.html" class="py-1" onclick="closeMobile()">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero section -->
+        <section class="bg-navy text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('images/law_firm_law.avif'); background-size: cover; background-position: center;">
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 fade-up">Client Testimonials</h1>
+                <p class="text-xl max-w-2xl mx-auto fade-up" style="animation-delay:0.2s">What our clients say about our
+                    legal expertise and dedication</p>
+            </div>
+        </section>
+
+        <!-- Marquee Testimonials Section — names replaced, white fade removed -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-serif font-bold text-navy text-center mb-4 fade-up">Stories of Success</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-10 rounded-full"></div>
+                <div class="marquee-container">
+                    <div class="marquee-track">
+                        <!-- 10 unique client cards with updated names (replaced per list) -->
+                        <!-- Card 1 - Rajendra Prasad -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Muddanna Associates handled my divorce with utmost sensitivity.
+                                They ensured a fair settlement and kept me informed throughout."</p>
+                            <p class="client-name">— Rajendra Prasad</p>
+                        </div>
+                        <!-- Card 2 - Priya Darthini.L -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Won my property dispute after 3 years. Their strategic approach
+                                and persistence made all the difference. Highly recommended!"</p>
+                            <p class="client-name">— Priya Darthini.L</p>
+                        </div>
+                        <!-- Card 3 - Puttaswami.C.S -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Excellent corporate law advice. They helped us navigate complex
+                                compliance and saved us from hefty penalties."</p>
+                            <p class="client-name">— Puttaswami.C.S</p>
+                        </div>
+                        <!-- Card 4 - Rangaswamy.K.P -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Got bail for my brother within 24 hours. They were responsive
+                                and fought aggressively. Truly grateful."</p>
+                            <p class="client-name">— Rangaswamy.K.P</p>
+                        </div>
+                        <!-- Card 5 - Keshva Murthy.J -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The team handled my father's will and estate with great care.
+                                Transparent and compassionate."</p>
+                            <p class="client-name">— Keshva Murthy.J</p>
+                        </div>
+                        <!-- Card 6 - Sharider.K.S -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Cyber crime case resolved quickly. They understood the tech
+                                aspects and kept me updated. Professional and courteous."</p>
+                            <p class="client-name">— Sharider.K.S</p>
+                        </div>
+                        <!-- Card 7 - Seethama.S.P -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"M&A due diligence was thorough. They caught critical issues and
+                                saved the deal. Their corporate team is top-notch."</p>
+                            <p class="client-name">— Seethama.S.P</p>
+                        </div>
+                        <!-- Card 8 - Nagamani.M.M -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Helped me with a consumer complaint against a builder. Got full
+                                refund plus compensation. Very persistent and knowledgeable."</p>
+                            <p class="client-name">— Nagamani.M.M</p>
+                        </div>
+                        <!-- Card 9 - Mybrappa.M.H (new) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Professional and dedicated team. They guided me through a
+                                complex civil suit with clarity and achieved a favorable outcome. Truly grateful for
+                                their support."</p>
+                            <p class="client-name">— Mybrappa.M.H</p>
+                        </div>
+                        <!-- Card 10 - Mallikarjun.H (new) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"I highly recommend Muddanna Associates for any legal matter.
+                                They are responsive, knowledgeable, and truly care about their clients. Exceptional
+                                service."</p>
+                            <p class="client-name">— Mallikarjun.H</p>
+                        </div>
+
+                        <!-- Duplicate first 5 cards for seamless infinite marquee (no mask, smooth loop) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Muddanna Associates handled my divorce with utmost sensitivity.
+                                They ensured a fair settlement and kept me informed throughout."</p>
+                            <p class="client-name">— Rajendra Prasad</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Won my property dispute after 3 years. Their strategic approach
+                                and persistence made all the difference. Highly recommended!"</p>
+                            <p class="client-name">— Priya Darthini.L</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Excellent corporate law advice. They helped us navigate complex
+                                compliance and saved us from hefty penalties."</p>
+                            <p class="client-name">— Puttaswami.C.S</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Got bail for my brother within 24 hours. They were responsive
+                                and fought aggressively. Truly grateful."</p>
+                            <p class="client-name">— Rangaswamy.K.P</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The team handled my father's will and estate with great care.
+                                Transparent and compassionate."</p>
+                            <p class="client-name">— Keshva Murthy.J</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Review Card - Redesigned with professional dark blue -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="google-review-card max-w-3xl mx-auto p-8 fade-up">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-google text-4xl text-white"></i>
+                        <span class="text-4xl font-bold text-white">4.8</span>
+                    </div>
+                    <div class="stars text-2xl flex">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <p class="text-center text-gray-200 mb-5 text-lg">Based on 150+ Google reviews — real client experiences
+                </p>
+                <div class="flex justify-center">
+                    <a href="https://maps.app.goo.gl/fuuEK66FsrrKRgi5A" target="_blank"
+                        class="gold-btn px-8 py-3 rounded-full font-semibold shadow-md transition flex items-center gap-2">
+                        <i class="fab fa-google"></i> See all Google reviews
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gold text-navy py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-3xl font-serif font-bold mb-4">Ready to share your experience?</h3>
+                <p class="text-lg mb-8">If you've worked with us, we'd love to hear your feedback. Or book a
+                    consultation to start your journey.</p>
+                <a href="consult.html"
+                    class="inline-block bg-navy text-white px-8 py-3 rounded-full font-semibold hover:bg-gold hover:text-navy transition shadow-md">Book
+                    a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (professional, same structure) -->
+    <footer class="bg-navy text-white pt-12 pb-4 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="w-24 h-1 bg-gold mb-8 mx-auto md:mx-0"></div>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <a href="index.html"><img src="images/MuddannaLlogo.webp"
+                                alt="Website Logo" class="logo"></a>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">Trusted legal expertise since 2019.
+                    </p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Civil cases and others.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold relative inline-block pb-2 footer-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-sm mt-4">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="practice.html" class="footer-link">Practice</a></li>
+                        <li><a href="our_team.html" class="footer-link">Team</a></li>
+                        <li><a href="cases.html" class="footer-link">Cases</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="FAQ.html" class="footer-link">Resources</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold footer-heading inline-block mb-4">Get in touch</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start justify-center md:justify-start"><i
+                                class="fas fa-map-marker-alt gold mt-1 mr-3"></i><span>Muddanna Associates,Muddanna
+                                Building, Sir M V Layout 7th Block,Muddayanapalya, Bengaluru, Karnataka-560091</span>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-phone-alt gold mr-3"></i> +91 090606 43224</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-envelope gold mr-3"></i> muddannaassociates@gmail.com</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-clock gold mr-3"></i> Monday - Saturday: 5:00PM - 9:00PM</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-clock gold mr-3"></i> Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center footer-credit">
+                <p>© 2025 Muddanna Associates. All Rights Reserved | Designed & Developed by <a
+                        href="https://www.webvistara.co.in/" target="_blank" class="hover:text-gold"
+                        style="color: #C5A059;">Web Vistara</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Disclaimer Modal - professional dark blue design -->
+    <div id="disclaimerModal" class="modal-overlay disclaimer-hidden">
+        <div class="disclaimer-card p-8 text-center">
+            <i class="fas fa-gavel text-5xl text-gold mb-4"></i>
+            <h3 class="text-2xl font-serif font-bold text-white mb-3">Disclaimer</h3>
+            <p class="text-gray-200 text-sm mb-5">The content on this website is for informational purposes only and
+                does not constitute legal advice. Visiting this website or communicating with Muddanna Associates does
+                not establish an attorney-client relationship. Please consult a qualified legal professional for advice
+                on your specific case.</p>
+            <button onclick="acceptDisclaimer()"
+                class="gold-btn px-6 py-2 rounded-full font-semibold text-navy w-full sm:w-auto">I Understand</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptDisclaimer() {
+            document.getElementById('disclaimerModal').classList.add('disclaimer-hidden');
+            localStorage.setItem('disclaimerAccepted', 'true');
+        }
+        function showDisclaimer() {
+            document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+        }
+        window.onload = function () {
+            if (!localStorage.getItem('disclaimerAccepted')) {
+                document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+            }
+        };
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        function closeMobile() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+    </script>
+    <style>
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .footer-heading {
+            position: relative;
+        }
+
+        @media (max-width: 640px) {
+            .testimonial-card {
+                width: 280px;
+                padding: 1.25rem;
+            }
+
+            .marquee-track {
+                gap: 1rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

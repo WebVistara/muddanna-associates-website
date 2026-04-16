@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Muddanna Associates | Premium Law Firm</title>
+    <link rel="icon" type="image/x-icon" href="images/Muddanna Associated Logo(1)-Photoroom.webp">
+    <!-- SEO meta -->
+    <meta name="description"
+        content="Muddanna Associates – trusted corporate & family law experts. Professional advocacy with a modern approach. Based in India.">
+    <meta name="keywords" content="law firm, criminal lawyer, corporate law, divorce lawyer, India, legal consultancy">
+    <!-- Tailwind + fontawesome + google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .footer-credit a {
+            color: #C5A059;
+        }
+
+        .footer-credit a:hover {
+            text-decoration: underline;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 50;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background-color: #20B954;
+        }
+
+        .rating-stars i {
+            color: #C5A059;
+            margin-right: 2px;
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid #C5A059;
+            color: #C5A059;
+        }
+
+        /* animations & cards */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .practice-card,
+        .why-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgb(255, 94, 0);
+        }
+
+        .practice-card:hover,
+        .why-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .practice-card {
+            border-bottom: 4px solid transparent;
+        }
+
+        .practice-card:hover {
+            border-bottom-color: #C5A059;
+        }
+
+        .why-card {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: white;
+            border: 1px solid #f0f0f0;
+        }
+
+        /* Testimonial marquee */
+        .testimonial-card {
+            background: #f9f9f9;
+            border-left: 4px solid #C5A059;
+            padding: 1.5rem;
+            width: 300px;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .stars {
+            color: #C5A059;
+            margin-bottom: 0.75rem;
+        }
+
+        .stars i {
+            margin-right: 2px;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            padding: 1rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: marquee 40s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Improved footer */
+        .footer-heading {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #C5A059;
+        }
+
+        .footer-link {
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #C5A059;
+            transform: translateX(3px);
+        }
+
+        .contact-item i {
+            width: 1.5rem;
+            color: #C5A059;
+        }
+
+
+
+          .logo {
+  width: 130px;
+  height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        /* animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Professional testimonial card - unified dark blue theme */
+        .testimonial-card {
+            background: linear-gradient(145deg, #0A2342, #102B4E);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            width: 340px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(0px);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.35);
+            border-color: #C5A059;
+            background: linear-gradient(145deg, #0C2A4A, #12335B);
+        }
+
+        .stars {
+            color: #C5A059;
+            margin-bottom: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .stars i {
+            margin-right: 3px;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            color: #F0F4FA;
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .client-name {
+            color: #C5A059;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            letter-spacing: 0.3px;
+            border-top: 1px dashed rgba(197, 160, 89, 0.4);
+            padding-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* Marquee animation - smoother, mask removed per request */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            /* Removed white fade / mask animation on both sides */
+            mask-image: none;
+            -webkit-mask-image: none;
+            padding: 1.5rem 0 2rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+            animation: marquee 48s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 relative">
+
+    <!-- LEGAL DISCLAIMER MODAL (Mandatory) -->
+    <div id="disclaimerModal"
+        class="fixed inset-0 z-[100] bg-[#0A2342]/95 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white max-w-2xl w-full p-8 rounded-sm shadow-2xl border-t-4 border-[#C5A059]">
+            <h2 class="font-serif text-3xl text-[#0A2342] font-bold mb-4 text-center">Legal Disclaimer</h2>
+            <div class="text-sm text-gray-600 space-y-3 h-64 overflow-y-auto pr-2 border-b border-gray-200 mb-6">
+                <p>As per the rules of the Bar Council of India, lawyers and law firms are not permitted to solicit work
+                    or advertise. By clicking on the "I Agree" button below, you acknowledge and confirm that:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>There has been no advertisement, personal communication, solicitation, invitation, or inducement
+                        of any sort whatsoever from us or any of our members to solicit any work through this website.
+                    </li>
+                    <li>You wish to gain more information about us for your own information and use.</li>
+                    <li>The information about us is provided to you on your specific request and any information
+                        obtained or materials downloaded from this website is completely at your own volition.</li>
+                </ul>
+            </div>
+            <div class="flex justify-center">
+                <button onclick="acceptDisclaimer()"
+                    class="bg-[#C5A059] hover:bg-[#b38846] text-[#0A2342] font-bold py-3 px-8 rounded transition duration-300">I
+                    Agree & Enter</button>
+            </div>
+        </div>
+    </div>
+    <a href="tel:+9109060643224"
+        class="fixed bottom-24 right-6 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Call Now">
+    
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <!-- floating whatsapp button -->
+    <a href="https://wa.me/9109060643224?text=Hello%20I%20need%20legal%20consultation" target="_blank"
+        class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- main navigation (sticky) -->
+    <nav class="bg-navy text-white sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+            </a>
+            
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide" id="nav-links">
+                <a href="index.html" class="nav-link hover-gold transition">Home</a>
+                <a href="about.html" class="nav-link hover-gold transition">About</a>
+                <a href="practice.html" class="nav-link hover-gold transition">Practice</a>
+                <a href="our_team.html" class="nav-link hover-gold transition">Team</a>
+                <a href="cases.html" class="nav-link hover-gold transition">Cases</a>
+                <a href="blog.html" class="nav-link hover-gold transition">Blog</a>
+                <a href="testimonials.html" class="nav-link hover-gold transition">Testimonials</a>
+                <a href="FAQ.html" class="nav-link hover-gold transition">Resources</a>
+                <a href="consult.html" class="nav-link hover-gold transition">Consult</a>
+                <a href="contact.html" class="nav-link hover-gold transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- mobile menu (hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 px-4 pb-4 flex flex-col space-y-2 text-sm uppercase">
+            <a href="index.html" class="py-1" onclick="closeMobile()">Home</a>
+            <a href="about.html" class="py-1" onclick="closeMobile()">About</a>
+            <a href="practice.html" class="py-1" onclick="closeMobile()">Practice</a>
+            <a href="our_team.html" class="py-1" onclick="closeMobile()">Team</a>
+            <a href="cases.html" class="py-1" onclick="closeMobile()">Cases</a>
+            <a href="blog.html" class="py-1" onclick="closeMobile()">Blog</a>
+            <a href="testimonials.html" class="py-1" onclick="closeMobile()">Testimonials</a>
+            <a href="FAQ.html" class="py-1" onclick="closeMobile()">Resources</a>
+            <a href="consult.html" class="py-1" onclick="closeMobile()">Consult</a>
+            <a href="contact.html" class="py-1" onclick="closeMobile()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT: 10 pages as sections -->
+    <main id="main-content">
+        <!-- HOME page (enhanced with animations & cards) -->
+        <section id="home" class="page active">
+            <!-- Hero -->
+            <div class="relative h-[70vh] bg-navy flex items-center"
+                style="background-image: linear-gradient(rgba(10,35,66,0.8), rgba(10,35,66,0.9)), url('images/law_firm_law.avif'); background-size: cover; background-position: center;">
+                <div class="container mx-auto px-4 text-white">
+                    <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 fade-up">Trusted Legal Experts <span
+                            class="gold">&</span> Professional Advocacy</h1>
+                    <p class="text-xl md:w-2/3 mb-8 fade-up" style="animation-delay:0.2s">Decades of combined experience
+                        in corporate & family law. Results-driven, client-first.</p>
+                    <a href="consult.html"
+                        class="bg-gold text-navy px-8 py-3 font-semibold hover:bg-white transition fade-up"
+                        style="animation-delay:0.4s">Consultation</a>
+                </div>
+            </div>
+            <!-- About firm summary -->
+        <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="gold uppercase tracking-widest text-sm font-semibold">Est. 2019</span>
+                <h2 class="text-4xl font-serif font-bold text-navy mb-6 mt-2">Dedicated Legal Excellence</h2>
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>Muddanna Associates is a Bengaluru-based legal practice committed to delivering reliable and
+                        strategic legal services across a wide range of civil and constitutional matters. Founded by Advocate
+                        Mohan Kumar, the firm combines strong academic grounding with practical courtroom experience to provide
+                        effective representation and trusted legal counsel.</p>
+        
+                    <p>With a client-focused approach, the firm handles matters related to constitutional law, property
+                        disputes, financial and contractual disputes, family matters, cheque bounce cases, and various civil
+                        proceedings. Known for professionalism, integrity, and attention to detail, the firm aims to protect
+                        client interests while navigating the complexities of the legal system.</p>
+        
+                    <p>Headquartered in Bengaluru, Muddanna Associates represents clients before the High Court of
+                        Karnataka and various District Courts, offering dependable advocacy and legal guidance.</p>
+                </div>
+            </div>
+        
+            <div class="flex justify-center">
+                <img src="images/law_firm_lawbooks.avif" alt="law books"
+                    class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+
+
+
+        <!-- Founder / Senior Advocate Profile -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-serif font-bold text-navy text-center mb-12">Founder & Advocate</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                    <div class="relative fade-up">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold/20 rounded-full -z-10"></div>
+                        <img src="images/hero.webp" alt="Mohan Kumar M"
+                            class="rounded-lg shadow-2xl w-full object-cover h-[550px] object-top">
+                    </div>
+                    <div class="fade-up">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i class="fas fa-user-tie text-5xl gold"></i>
+                            <div>
+                                <h3 class="text-3xl font-serif font-bold text-navy">Mohan Kumar M</h3>
+                                <p class="text-gold font-semibold">Advocate | Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 leading-relaxed">Mohan Kumar M is a practicing advocate with over 9 years
+                            of legal experience, specializing in constitutional and civil law matters. He holds a Master's
+                            Degree in Economics from Janabharathi Campus, Bengaluru, and completed his LL.B from KLE Society,
+                            Bengaluru.</p>
+        
+                        
+                        <div class="flex gap-8">
+                            <div><i class="fas fa-gavel gold"></i> <span class="font-semibold">9+ years experience</span></div>
+                            <div><i class="fas fa-balance-scale gold"></i> <span class="font-semibold">High Court & District
+                                    Courts</span></div>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="about.html"
+                                class="inline-flex items-center gap-2 border-2 border-gold text-gold px-6 py-3 rounded-full font-semibold hover:bg-gold hover:text-blue transition duration-300">
+                                Know More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Practice areas preview (cards with animation) -->
+        <div class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-serif font-bold text-navy text-center mb-12">Practice Areas</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.1s">
+                        <i class="fas fa-home text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Property Related Suits</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                            <li>Suit for Declaration</li>
+                            <li>Suit for Permanent Injunction</li>
+                            <li>Suit for Mandatory Injunction</li>
+                            <li>Documents drafting</li>
+                      
+                            <li>Landlord and tenant litigation cases</li>
+                            <li>Suit for Specific Performance of Contract</li>
+                            <li>Suit for Cancellation of Sale Deed / Agreement</li>
+                            <li>Suit for Easement Rights</li>
+                        </ul>
+                    </div>
+        
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.15s">
+                        <i class="fas fa-rupee-sign text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Money Related Suits</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                            <li>Money Recovery Suit</li>
+                            <li>Summary Suit under Order XXXVII CPC</li>
+                            <li>Suit for Damages / Compensation</li>
+                            <li>Suit for Recovery based on Promissory Note or Agreement</li>
+                        </ul>
+                    </div>
+        
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.2s">
+                        <i class="fas fa-file-signature text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Contract Related Suits</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                            <li>Suit for Breach of Contract</li>
+                            <li>Suit for Specific Performance</li>
+                            <li>Suit for Refund of Advance Amount</li>
+                            <li>Suit for Enforcement of Agreement</li>
+                        </ul>
+                    </div>
+        
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.25s">
+                        <i class="fas fa-users text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Family Matters</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                            <li>Divorce Petition</li>
+                            <li>Restitution of Conjugal Rights</li>
+                            <li>Maintenance Petition</li>
+                            <li>Child Custody Petition</li>
+                        </ul>
+                    </div>
+        
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.3s">
+                        <i class="fas fa-gavel text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Other Civil Proceedings</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                            <li>Probate and Succession Cases</li>
+                            <li>Guardianship Petition</li>
+                            <li>Execution Petition</li>
+                            <li>Caveat Petition</li>
+                            <li>Consumer Cases</li>
+                            <li>Cheque Bounce</li>
+                        </ul>
+                    </div>
+        
+                    <div class="practice-card p-6 fade-up" style="animation-delay:0.35s">
+                        <i class="fas fa-balance-scale text-gold text-3xl mb-3"></i>
+                        <h3 class="font-bold text-xl">Criminal Cases</h3>
+                        <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                           
+                            <li>Bail applications & anticipatory bail</li>
+                            <li>Trial advocacy & appeals</li>
+                            <li>Quashing of FIRS</li>
+                            <li>Expert legal advice</li>
+                          
+                           
+                       
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="practice.html" class="text-gold font-semibold">VIEW ALL AREAS →</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        
+            <!-- Why Choose Our Firm (cards with animation) -->
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-serif font-bold text-navy text-center mb-12">Why choose us?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="why-card fade-up" style="animation-delay:0.2s">
+                <i class="fas fa-medal text-5xl gold mb-4"></i>
+                <h3 class="font-bold text-xl">9+ years experience</h3>
+                <p>Senior advocates with deep courtroom experience.</p>
+            </div>
+            <div class="why-card fade-up" style="animation-delay:0.3s">
+                <i class="fas fa-chart-line text-5xl gold mb-4"></i> <!-- Changed icon -->
+                <h3 class="font-bold text-xl">Proven results</h3> <!-- New heading -->
+                <p>Track record of successful verdicts and settlements.</p> <!-- New description -->
+            </div>
+            <div class="why-card fade-up" style="animation-delay:0.4s">
+                <i class="fas fa-shield-alt text-5xl gold mb-4"></i>
+                <h3 class="font-bold text-xl">Confidentiality</h3>
+                <p>Your privacy is our ethical duty.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+            <!-- Client testimonials with marquee animation (15 cards) -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-serif font-bold text-navy text-center mb-4 fade-up">Stories of Success</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-10 rounded-full"></div>
+                <div class="marquee-container">
+                    <div class="marquee-track">
+                        <!-- 10 unique client cards with updated names (replaced per list) -->
+                        <!-- Card 1 - Rajendra Prasad -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Muddanna Associates handled my divorce with utmost sensitivity.
+                                They ensured a fair settlement and kept me informed throughout."</p>
+                            <p class="client-name">— Rajendra Prasad</p>
+                        </div>
+                        <!-- Card 2 - Priya Darthini.L -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Won my property dispute after 3 years. Their strategic approach
+                                and persistence made all the difference. Highly recommended!"</p>
+                            <p class="client-name">— Priya Darthini.L</p>
+                        </div>
+                        <!-- Card 3 - Puttaswami.C.S -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Excellent corporate law advice. They helped us navigate complex
+                                compliance and saved us from hefty penalties."</p>
+                            <p class="client-name">— Puttaswami.C.S</p>
+                        </div>
+                        <!-- Card 4 - Rangaswamy.K.P -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Got bail for my brother within 24 hours. They were responsive
+                                and fought aggressively. Truly grateful."</p>
+                            <p class="client-name">— Rangaswamy.K.P</p>
+                        </div>
+                        <!-- Card 5 - Keshva Murthy.J -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The team handled my father's will and estate with great care.
+                                Transparent and compassionate."</p>
+                            <p class="client-name">— Keshva Murthy.J</p>
+                        </div>
+                        <!-- Card 6 - Sharider.K.S -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Cyber crime case resolved quickly. They understood the tech
+                                aspects and kept me updated. Professional and courteous."</p>
+                            <p class="client-name">— Sharider.K.S</p>
+                        </div>
+                        <!-- Card 7 - Seethama.S.P -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"M&A due diligence was thorough. They caught critical issues and
+                                saved the deal. Their corporate team is top-notch."</p>
+                            <p class="client-name">— Seethama.S.P</p>
+                        </div>
+                        <!-- Card 8 - Nagamani.M.M -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Helped me with a consumer complaint against a builder. Got full
+                                refund plus compensation. Very persistent and knowledgeable."</p>
+                            <p class="client-name">— Nagamani.M.M</p>
+                        </div>
+                        <!-- Card 9 - Mybrappa.M.H (new) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Professional and dedicated team. They guided me through a
+                                complex civil suit with clarity and achieved a favorable outcome. Truly grateful for
+                                their support."</p>
+                            <p class="client-name">— Mybrappa.M.H</p>
+                        </div>
+                        <!-- Card 10 - Mallikarjun.H (new) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"I highly recommend Muddanna Associates for any legal matter.
+                                They are responsive, knowledgeable, and truly care about their clients. Exceptional
+                                service."</p>
+                            <p class="client-name">— Mallikarjun.H</p>
+                        </div>
+        
+                        <!-- Duplicate first 5 cards for seamless infinite marquee (no mask, smooth loop) -->
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Muddanna Associates handled my divorce with utmost sensitivity.
+                                They ensured a fair settlement and kept me informed throughout."</p>
+                            <p class="client-name">— Rajendra Prasad</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Won my property dispute after 3 years. Their strategic approach
+                                and persistence made all the difference. Highly recommended!"</p>
+                            <p class="client-name">— Priya Darthini.L</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Excellent corporate law advice. They helped us navigate complex
+                                compliance and saved us from hefty penalties."</p>
+                            <p class="client-name">— Puttaswami.C.S</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"Got bail for my brother within 24 hours. They were responsive
+                                and fought aggressively. Truly grateful."</p>
+                            <p class="client-name">— Rangaswamy.K.P</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The team handled my father's will and estate with great care.
+                                Transparent and compassionate."</p>
+                            <p class="client-name">— Keshva Murthy.J</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+            <!-- Latest legal articles -->
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-serif font-bold text-navy text-center mb-12">Latest articles</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div><img
+                            src="images/law_firm_divorce.avif"
+                            class="h-40 w-full object-cover">
+                        <h3 class="font-bold mt-2">Divorce procedure in India</h3>
+                        <p class="text-sm">Step-by-step guide to file under Hindu Marriage Act.</p>
+                    </div>
+                    <div><img
+                            src="images/FIR_law_firm.webp"
+                            class="h-40 w-full object-cover">
+                        <h3 class="font-bold mt-2">How to file FIR</h3>
+                        <p class="text-sm">Know your rights and the correct process.</p>
+                    </div>
+                    <div><img
+                            src="images/corporate-compliance_law_firm.webp"
+                            class="h-40 w-full object-cover">
+                        <h3 class="font-bold mt-2">Corporate compliance rules</h3>
+                        <p class="text-sm">New updates for 2025 every business should know.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Call-to-action button & map -->
+            <div class="bg-gray-100 py-12">
+                <div class="container mx-auto px-4 text-center">
+                    <h3 class="text-2xl font-serif font-bold text-navy">Book your consultation today</h3><a
+                        href="consult.html"
+                        class="inline-block mt-4 bg-gold text-navy px-8 py-3 font-semibold">Schedule now</a>
+                </div>
+            </div>
+            <div class="map-container"
+                onclick="window.open('https://www.google.com/maps?q=Sir+MV+Layout+Muddanna+Building+Muddayanapalya+7th+Block+Bengaluru+Karnataka+560091','_blank')">
+            
+                <iframe
+                    src="https://www.google.com/maps?q=Sir+MV+Layout+Muddanna+Building+Muddayanapalya+7th+Block+Bengaluru+Karnataka+560091&output=embed"
+                    width="100%" height="450" style="border:0;" loading="lazy">
+                </iframe>
+            
+            </div>
+        </section>
+
+        
+       
+
+        <!-- BLOG page (unchanged) -->
+       
+
+        
+
+
+       
+
+       
+    </main>
+
+    <!-- IMPROVED PROFESSIONAL FOOTER -->
+    <!-- Footer (same as improved professional footer) -->
+<footer class="bg-navy text-white pt-12 pb-4 mt-8">
+    <div class="container mx-auto px-4">
+        <!-- Top border accent -->
+        <div class="w-24 h-1 bg-gold mb-8 mx-auto md:mx-0"></div>
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <!-- Left: company name with logo -->
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                    <a href="index.html">
+                        <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+                    </a>
+                </div>
+            <p class="text-sm text-gray-300 leading-relaxed">Trusted legal expertise since 2019.
+            </p>
+            <p class="text-sm text-gray-300 leading-relaxed">Civil cases and others.</p>
+            </div>
+
+            <!-- Middle: quick links -->
+            <div class="text-center md:text-left">
+                <h4 class="text-lg font-semibold gold relative inline-block pb-2 footer-heading">Quick Links</h4>
+                <ul class="space-y-2 text-sm mt-4">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="aboutus.html" class="footer-link">About</a></li>
+                    <li><a href="practice.html" class="footer-link">Practice</a></li>
+                    <li><a href="our_team.html" class="footer-link">Team</a></li>
+                    <li><a href="cases.html" class="footer-link">Cases</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                    <li><a href="FAQ.html" class="footer-link">Resources</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: contact info -->
+            <div class="text-center md:text-left">
+                <h4 class="text-lg font-semibold gold footer-heading inline-block mb-4">Get in touch</h4>
+                <div class="space-y-3 text-sm">
+                    <p class="flex items-start justify-center md:justify-start"><i
+                            class="fas fa-map-marker-alt gold mt-1 mr-3"></i>
+                        <span>Muddanna Associates,Muddanna Building, Sir M V Layout 7th Block,Muddayanapalya, Bengaluru,
+                            Karnataka-560091</span>
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start"><i
+                            class="fas fa-phone-alt gold mr-3"></i> +91
+                        090606 43224</p>
+                    <p class="flex items-center justify-center md:justify-start"><i
+                            class="fas fa-envelope gold mr-3"></i>
+                        muddannaassociates@gmail.com</p>
+                    <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                        Monday - Saturday: 5:00PM- 9:00PM
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                        Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+        </div>
+
+        <!-- Credit row -->
+        <div class="border-t border-gray-700 pt-6 text-center footer-credit">
+            <p>© 2025 Muddanna Associates. All Rights Reserved | Designed & Developed by <a
+                    href="https://www.webvistara.co.in/" target="_blank" class="hover:text-gold"
+                    style="color: #C5A059;">
+                    Web Vistara
+                </a>
+            </p>
+
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Hidden disclaimer page (extra) -->
+    <section id="disclaimer" class="page container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-serif font-bold">Disclaimer</h2>
+        <div class="prose">Same content as modal.</div>
+    </section>
+
+    <script>
+        function acceptDisclaimer() { document.getElementById('disclaimerModal').classList.add('disclaimer-hidden'); }
+        function showDisclaimer() { document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); document.getElementById('disclaimer').classList.add('active'); window.location.hash = '#disclaimer'; }
+        const pages = document.querySelectorAll('.page'); const navLinks = document.querySelectorAll('.nav-link');
+        function activatePage(hash) { if (!hash || hash === '#') hash = '#home'; pages.forEach(p => p.classList.remove('active')); const target = document.querySelector(hash); if (target) target.classList.add('active'); else document.querySelector('#home').classList.add('active'); navLinks.forEach(l => l.classList.remove('active')); document.querySelector(`.nav-link[href="${hash}"]`)?.classList.add('active'); }
+        window.addEventListener('hashchange', () => activatePage(window.location.hash));
+        window.addEventListener('load', () => { if (window.location.hash) activatePage(window.location.hash); else activatePage('#home'); });
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function closeMobile() { document.getElementById('mobile-menu').classList.add('hidden'); }
+        function toggleFaq(id) { const el = document.getElementById('faq' + id); el.classList.toggle('hidden'); }
+        window.onload = function () { if (!localStorage.getItem('disclaimerAccepted')) { document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden'); } }
+        function acceptDisclaimer() { document.getElementById('disclaimerModal').classList.add('disclaimer-hidden'); localStorage.setItem('disclaimerAccepted', 'true'); }
+        document.querySelectorAll('form').forEach(f => f.addEventListener('submit', (e) => { e.preventDefault(); alert('Form submitted (demo). Our team will reach out.'); }));
+    </script>
+    <style>
+        .disclaimer-hidden {
+            display: none !important;
+        }
+    </style>
+</body>
+
+</html>

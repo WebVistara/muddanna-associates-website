@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Resources | Muddanna Associates</title>
+    <link rel="icon" type="image/x-icon" href="images/Muddanna Associated Logo(1)-Photoroom.webp">
+    <!-- SEO meta -->
+    <meta name="description"
+        content="Essential legal resources and official portals — Karnataka State Commission, Supreme Court, Karnataka Judiciary, and eCourts. Trusted links from Muddanna Associates.">
+    <meta name="keywords"
+        content="legal resources, Karnataka judiciary, Supreme Court, eCourts, consumer forum, official links">
+    <!-- Tailwind + fontawesome + google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        /* animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* resource card styles — identical feel to original faq-card */
+        .resource-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(10, 35, 66, 0.08);
+            border: 1px solid #f0f0f0;
+            padding: 1.75rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #C5A059;
+        }
+
+        .resource-icon {
+            font-size: 2.2rem;
+            color: #C5A059;
+            margin-bottom: 1.25rem;
+        }
+
+        .resource-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #0A2342;
+            transition: color 0.2s;
+        }
+
+        .resource-link i {
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .resource-link:hover {
+            color: #C5A059;
+        }
+
+        .resource-link:hover i {
+            transform: translateX(4px);
+        }
+
+        .btn-consult {
+            background-color: #C5A059;
+            color: #0A2342;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-consult:hover {
+            background-color: #0A2342;
+            color: white;
+        }
+
+        .footer-link {
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #C5A059;
+            transform: translateX(3px);
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #C5A059;
+        }
+
+        .logo {
+            width: 130px;
+            height: 90px;
+        }
+
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .footer-heading {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 relative">
+
+    <!-- LEGAL DISCLAIMER MODAL (Mandatory - kept as originally intended) -->
+   
+
+    <!-- Call button -->
+    <a href="tel:+9109060643224"
+        class="fixed bottom-24 right-6 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Call Now">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- floating whatsapp button -->
+    <a href="https://wa.me/9109060643224?text=Hello%20I%20need%20legal%20consultation" target="_blank"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation (consistent) -->
+    <nav class="bg-navy text-white sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/MuddannaLlogo.webp" alt="Muddanna Associates Logo"
+                    class="logo">
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                <a href="index.html" class="hover-gold transition">Home</a>
+                <a href="about.html" class="hover-gold transition">About</a>
+                <a href="practice.html" class="hover-gold transition">Practice</a>
+                <a href="our_team.html" class="hover-gold transition">Team</a>
+                <a href="cases.html" class="hover-gold transition">Cases</a>
+                <a href="blog.html" class="hover-gold transition">Blog</a>
+                <a href="testimonials.html" class="hover-gold transition">Testimonials</a>
+                <a href="FAQ.html" class="border-b-2 border-gold text-gold transition">Resources</a>
+                <a href="consult.html" class="hover-gold transition">Consult</a>
+                <a href="contact.html" class="hover-gold transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 px-4 pb-4 flex flex-col space-y-2 text-sm uppercase">
+            <a href="index.html" class="py-1" onclick="closeMobile()">Home</a>
+            <a href="about.html" class="py-1" onclick="closeMobile()">About</a>
+            <a href="practice.html" class="py-1" onclick="closeMobile()">Practice</a>
+            <a href="our_team.html" class="py-1" onclick="closeMobile()">Team</a>
+            <a href="cases.html" class="py-1" onclick="closeMobile()">Cases</a>
+            <a href="blog.html" class="py-1" onclick="closeMobile()">Blog</a>
+            <a href="testimonials.html" class="py-1" onclick="closeMobile()">Testimonials</a>
+            <a href="FAQ.html" class="py-1 text-gold" onclick="closeMobile()">Resources</a>
+            <a href="consult.html" class="py-1" onclick="closeMobile()">Consult</a>
+            <a href="contact.html" class="py-1" onclick="closeMobile()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content: Resources page (replaces FAQ) -->
+    <main>
+        <!-- Hero section -->
+        <section class="bg-navy text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('images/law_firm_law.avif'); background-size: cover; background-position: center;">
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 fade-up">Legal Resources & Links</h1>
+                <p class="text-xl max-w-2xl mx-auto fade-up" style="animation-delay:0.2s">Official portals and trusted
+                    references — Karnataka judiciary, Supreme Court, and e‑services</p>
+            </div>
+        </section>
+
+        <!-- Resource Cards Grid -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: KSCDRC -->
+                <div class="resource-card fade-up">
+                    <div class="resource-icon"><i class="fas fa-city"></i></div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-2">Karnataka State Consumer Disputes Redressal
+                        Commission</h3>
+                    <p class="text-gray-600 text-sm mb-4">Official website for consumer complaints, orders, and cause
+                        lists. Access forms, judgments, and district forum details.</p>
+                    <a href="https://kscdrc.karnataka.gov.in/en" target="_blank" rel="noopener"
+                        class="resource-link mt-2">
+                        Visit Portal <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2: Supreme Court of India -->
+                <div class="resource-card fade-up" style="animation-delay:0.1s">
+                    <div class="resource-icon"><i class="fas fa-gavel"></i></div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-2">Supreme Court of India</h3>
+                    <p class="text-gray-600 text-sm mb-4">Official website of the apex court. Latest judgments, daily
+                        orders, case status, and court circulars.</p>
+                    <a href="https://www.sci.gov.in/" target="_blank" rel="noopener" class="resource-link mt-2">
+                        Visit Portal <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 3: Karnataka Judiciary -->
+                <div class="resource-card fade-up" style="animation-delay:0.2s">
+                    <div class="resource-icon"><i class="fas fa-landmark"></i></div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-2">Karnataka Judiciary (High Court & District
+                        Courts)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Official portal for Karnataka High Court, district courts,
+                        case status, e-filing, and notifications.</p>
+                    <a href="https://judiciary.karnataka.gov.in/" target="_blank" rel="noopener"
+                        class="resource-link mt-2">
+                        Visit Portal <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 4: eCourts Services -->
+                <div class="resource-card fade-up" style="animation-delay:0.3s">
+                    <div class="resource-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-2">eCourts India Services</h3>
+                    <p class="text-gray-600 text-sm mb-4">National eCourts portal — case search, online payments,
+                        virtual court links, and cause lists across India.</p>
+                    <a href="https://ecourts.gov.in/ecourts_home/" target="_blank" rel="noopener"
+                        class="resource-link mt-2">
+                        Visit Portal <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional description and CTA (adapted) -->
+            <div class="mt-16 text-center bg-gray-50 p-12 rounded-2xl fade-up">
+                <i class="fas fa-hand-holding-heart text-5xl gold mb-4"></i>
+                <h2 class="text-3xl font-serif font-bold text-navy mb-4">Need help navigating legal resources?</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Our team can guide you through procedures,
+                    documentation, or connect you with the right forum. Schedule a free 10‑minute call.</p>
+                <a href="consult.html" class="btn-consult">Book Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (professional, with fixes) -->
+    <footer class="bg-navy text-white pt-12 pb-4 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="w-24 h-1 bg-gold mb-8 mx-auto md:mx-0"></div>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Left: firm info -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <a href="index.html">
+                            <img src="images/MuddannaLlogo.webp" alt="Website Logo"
+                                class="logo">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">Trusted legal expertise since 2019.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Civil, criminal, family & corporate matters.</p>
+                </div>
+                <!-- Middle: quick links (cleaned) -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold relative inline-block pb-2 footer-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-sm mt-4">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="practice.html" class="footer-link">Practice</a></li>
+                        <li><a href="our_team.html" class="footer-link">Team</a></li>
+                        <li><a href="cases.html" class="footer-link">Cases</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="FAQ.html" class="footer-link">Resources</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Right: contact -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold footer-heading inline-block mb-4">Get in touch</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start justify-center md:justify-start">
+                            <i class="fas fa-map-marker-alt gold mt-1 mr-3"></i>
+                            <span>Muddanna Associates, Muddanna Building, Sir M V Layout 7th Block, Muddayanapalya,
+                                Bengaluru, Karnataka-560091</span>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-phone-alt gold mr-3"></i> +91 090606 43224</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-envelope gold mr-3"></i> muddannaassociates@gmail.com</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-clock gold mr-3"></i> Monday - Saturday: 5:00PM - 9:00PM</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-clock gold mr-3"></i> Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Social links -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i
+                        class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <!-- Credit row -->
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>© 2025 Muddanna Associates. All Rights Reserved | Designed & Developed by
+                    <a href="https://www.webvistara.co.in/" target="_blank" class="hover:text-gold"
+                        style="color: #C5A059;">Web Vistara</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden disclaimer section (for direct link) -->
+    <section id="disclaimer" style="display: none;">Disclaimer content same as modal.</section>
+
+    <script>
+        // Disclaimer modal
+        function acceptDisclaimer() {
+            document.getElementById('disclaimerModal').classList.add('disclaimer-hidden');
+            localStorage.setItem('disclaimerAccepted', 'true');
+        }
+        function showDisclaimer() {
+            document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+        }
+        window.onload = function () {
+            if (!localStorage.getItem('disclaimerAccepted')) {
+                document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+            }
+        };
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        function closeMobile() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Optional: close modal if clicked outside (basic)
+        document.getElementById('disclaimerModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                acceptDisclaimer();
+            }
+        });
+    </script>
+</body>
+
+</html>

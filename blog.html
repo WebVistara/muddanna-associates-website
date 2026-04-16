@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Legal Blog | Muddanna Associates</title>
+    <link rel="icon" type="image/x-icon" href="images\Muddanna Associated Logo(1)-Photoroom.webp">
+    <!-- SEO meta -->
+    <meta name="description"
+        content="Expert legal articles on divorce procedure, FIR filing, property registration, corporate compliance, and more. Stay informed with Muddanna Associates.">
+    <meta name="keywords"
+        content="legal blog, divorce in India, how to file FIR, property registration, corporate compliance">
+    <!-- Tailwind + fontawesome + google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navy {
+            color: #0A2342;
+        }
+
+        .bg-navy {
+            background-color: #0A2342;
+        }
+
+        .border-navy {
+            border-color: #0A2342;
+        }
+
+        .gold {
+            color: #C5A059;
+        }
+
+        .bg-gold {
+            background-color: #C5A059;
+        }
+
+        .border-gold {
+            border-color: #C5A059;
+        }
+
+        .hover-gold:hover {
+            color: #C5A059;
+        }
+
+        .hover-bg-gold:hover {
+            background-color: #C5A059;
+        }
+
+        /* animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .blog-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #C5A059;
+        }
+
+        .blog-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-card:hover .blog-img {
+            transform: scale(1.05);
+        }
+
+        .category-tag {
+            background-color: #f0f0f0;
+            color: #0A2342;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .btn-read {
+            background-color: #C5A059;
+            color: #0A2342;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            display: inline-block;
+            transition: all 0.3s;
+            margin-top: auto;
+            align-self: flex-start;
+            font-size: 0.9rem;
+        }
+
+        .btn-read:hover {
+            background-color: #0A2342;
+            color: white;
+        }
+
+        .footer-link {
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #C5A059;
+            transform: translateX(3px);
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #C5A059;
+        }
+
+        .sidebar-card {
+            background-color: #f9f9f9;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .recent-post-item {
+            border-bottom: 1px dashed #ddd;
+            padding: 0.75rem 0;
+        }
+
+        .recent-post-item:last-child {
+            border-bottom: none;
+        }
+
+        
+          .logo {
+  width: 130px;
+  height: 90px;
+}
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 relative">
+
+   
+    <a href="tel:+9109060643224"
+        class="fixed bottom-24 right-6 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Call Now">
+    
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <!-- floating whatsapp button -->
+    <a href="https://wa.me/9109060643224?text=Hello%20I%20need%20legal%20consultation" target="_blank"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation (consistent with other pages) -->
+    <nav class="bg-navy text-white sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+                <a href="index.html" class="hover-gold transition">Home</a>
+                <a href="about.html" class="hover-gold transition">About</a>
+                <a href="practice.html" class="hover-gold transition">Practice</a>
+                <a href="our_team.html" class="hover-gold transition">Team</a>
+                <a href="cases.html" class="hover-gold transition">Cases</a>
+                <a href="blog.html" class="border-b-2 border-gold text-gold transition">Blog</a>
+                <a href="testimonials.html" class="hover-gold transition">Testimonials</a>
+                <a href="FAQ.html" class="hover-gold transition">Resources</a>
+                <a href="consult.html" class="hover-gold transition">Consult</a>
+                <a href="contact.html" class="hover-gold transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- mobile menu (hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 px-4 pb-4 flex flex-col space-y-2 text-sm uppercase">
+            <a href="index.html" class="py-1" onclick="closeMobile()">Home</a>
+            <a href="about.html" class="py-1" onclick="closeMobile()">About</a>
+            <a href="practice.html" class="py-1" onclick="closeMobile()">Practice</a>
+            <a href="our_team.html" class="py-1" onclick="closeMobile()">Team</a>
+            <a href="cases.html" class="py-1" onclick="closeMobile()">Cases</a>
+            <a href="blog.html" class="py-1 text-gold" onclick="closeMobile()">Blog</a>
+            <a href="testimonials.html" class="py-1" onclick="closeMobile()">Testimonials</a>
+            <a href="FAQ.html" class="py-1" onclick="closeMobile()">Resources</a>
+            <a href="consult.html" class="py-1" onclick="closeMobile()">Consult</a>
+            <a href="contact.html" class="py-1" onclick="closeMobile()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Blog Content -->
+    <main>
+        <!-- Hero section -->
+        <section class="bg-navy text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('images/law_firm_law.avif'); background-size: cover; background-position: center;">
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4 fade-up">Legal Blog & Resources</h1>
+                <p class="text-xl max-w-2xl mx-auto fade-up" style="animation-delay:0.2s">Insights, guides, and updates
+                    from our legal experts</p>
+            </div>
+        </section>
+
+        <!-- Blog Grid + Sidebar -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Main Blog Posts (8 columns on large) -->
+                <div class="lg:w-2/3">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Blog Post 1: Divorce procedure -->
+                        <div class="blog-card fade-up">
+                            <img src="images/divorce-procedures-in-india.webp"
+                                alt="Divorce" class="blog-img">
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="category-tag">Family Law</span>
+                                    <span class="text-xs text-gray-500">5 min read</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold text-navy mb-2">Divorce Procedure in India</h3>
+                                <p class="text-sm text-gray-600 mb-4">Complete guide to filing for divorce under Hindu
+                                    Marriage Act, including mutual consent and contested divorce steps, documents
+                                    required, and timeline.</p>
+                                <a href="https://blog.ipleaders.in/divorce-procedure-in-india/" target="_blank"
+                                    class="btn-read">Read Article →</a>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 2: How to file FIR -->
+                        <div class="blog-card fade-up" style="animation-delay:0.1s">
+                            <img src="images/FIR_law_firm.webp"
+                                alt="FIR" class="blog-img">
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="category-tag">Criminal Law</span>
+                                    <span class="text-xs text-gray-500">4 min read</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold text-navy mb-2">How to File an FIR</h3>
+                                <p class="text-sm text-gray-600 mb-4">Step-by-step process for lodging an FIR in India,
+                                    rights of the complainant, and what to do if police refuse to register.</p>
+                                <a href="https://splawchambersbangalore.com/fir-filing-process-in-bangalore/" target="_blank" class="btn-read">Read
+                                    Article →</a>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 3: Property registration -->
+                        <div class="blog-card fade-up" style="animation-delay:0.2s">
+                            <img src="images/property_reg.webp"
+                                alt="Property" class="blog-img">
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="category-tag">Real Estate</span>
+                                    <span class="text-xs text-gray-500">6 min read</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold text-navy mb-2">Property Registration Process
+                                </h3>
+                                <p class="text-sm text-gray-600 mb-4">Everything you need to know about property
+                                    registration in India, from stamp duty calculation to document checklist and online
+                                    options.</p>
+                                <a href="https://www.sobha.com/blog/bangalore-property-registration-process/" target="_blank"
+                                    class="btn-read">Read Article →</a>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 4: Civil laws -->
+                    <div class="blog-card fade-up" style="animation-delay:0.3s">
+                        <img src="images/civil_law.webp" alt="Legal Notice" class="blog-img">
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="category-tag">Civil Law</span>
+                                <span class="text-xs text-gray-500">5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-serif font-bold text-navy mb-2">
+                                How to Send a Legal Notice in India
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Learn when and how to send a legal notice, its importance, format, and legal consequences before filing a
+                                case.
+                            </p>
+                            <a href="https://www.myadvo.in/blog/how-to-send-a-legal-notice" class="btn-read">Read Article →</a>
+                        </div>
+                    </div>
+
+                        <!-- Additional blog post: Cyber crime awareness -->
+                        <div class="blog-card fade-up" style="animation-delay:0.4s">
+                            <img src="images/cyberattack_1200x627.webp"
+                                alt="Cyber Crime" class="blog-img">
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="category-tag">Cyber Law</span>
+                                    <span class="text-xs text-gray-500">5 min read</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold text-navy mb-2">Cyber Crime Awareness</h3>
+                                <p class="text-sm text-gray-600 mb-4">Common types of cyber fraud in India and immediate
+                                    steps to take if you become a victim.</p>
+                                <a href="https://cybercrime.gov.in/Webform/CyberAware.aspx" target="_blank" class="btn-read">Read Article
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <!-- Blog post: Consumer rights -->
+                        <div class="blog-card fade-up" style="animation-delay:0.5s">
+                            <img src="images/consumer_right.webp"
+                                alt="Consumer" class="blog-img">
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="category-tag">Consumer Law</span>
+                                    <span class="text-xs text-gray-500">4 min read</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold text-navy mb-2">Consumer Rights & Remedies</h3>
+                                <p class="text-sm text-gray-600 mb-4">How to file a complaint in consumer court,
+                                    e-filing process, and what compensation you can claim.</p>
+                                <a href="https://plutuseducation.com/blog/consumer-rights-in-india/" target="_blank" class="btn-read">Read Article
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar (Categories + Recent Posts) -->
+                <div class="lg:w-1/3">
+                    <!-- Categories -->
+                    <div class="sidebar-card fade-up">
+                        <h3 class="text-2xl font-serif font-bold text-navy mb-4 flex items-center"><i
+                                class="fas fa-folder-open gold mr-2"></i> Categories</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Family Law</a>
+                                <span class="text-sm bg-gray-200 px-2 py-1 rounded">4</span></li>
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Criminal
+                                    Law</a> <span class="text-sm bg-gray-200 px-2 py-1 rounded">2</span></li>
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Corporate
+                                    Law</a> <span class="text-sm bg-gray-200 px-2 py-1 rounded">3</span></li>
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Real Estate</a>
+                                <span class="text-sm bg-gray-200 px-2 py-1 rounded">2</span></li>
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Cyber Law</a>
+                                <span class="text-sm bg-gray-200 px-2 py-1 rounded">1</span></li>
+                            <li class="flex justify-between items-center"><a href="#" class="hover-gold">Consumer
+                                    Law</a> <span class="text-sm bg-gray-200 px-2 py-1 rounded">1</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-card fade-up" style="animation-delay:0.2s">
+                        <h3 class="text-2xl font-serif font-bold text-navy mb-4 flex items-center"><i
+                                class="fas fa-clock gold mr-2"></i> Recent Posts</h3>
+                        <div class="recent-post-item">
+                            <a href="#" class="font-semibold hover-gold">Divorce Procedure in India</a>
+                            <p class="text-xs text-gray-500">May 10, 2025</p>
+                        </div>
+                        <div class="recent-post-item">
+                            <a href="#" class="font-semibold hover-gold">How to File an FIR</a>
+                            <p class="text-xs text-gray-500">Apr 28, 2025</p>
+                        </div>
+                        <div class="recent-post-item">
+                            <a href="#" class="font-semibold hover-gold">Property Registration Process</a>
+                            <p class="text-xs text-gray-500">Apr 15, 2025</p>
+                        </div>
+                        <div class="recent-post-item">
+                            <a href="#" class="font-semibold hover-gold">Corporate Compliance 2025</a>
+                            <p class="text-xs text-gray-500">Apr 2, 2025</p>
+                        </div>
+                        <div class="recent-post-item">
+                            <a href="#" class="font-semibold hover-gold">Cyber Crime Awareness</a>
+                            <p class="text-xs text-gray-500">Mar 20, 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Consultation CTA in sidebar -->
+                    <div class="bg-gold text-navy p-6 rounded-lg text-center fade-up" style="animation-delay:0.4s">
+                        <i class="fas fa-gavel text-4xl mb-3"></i>
+                        <h4 class="text-xl font-serif font-bold mb-2">Need legal advice?</h4>
+                        <p class="text-sm mb-4">Our experts are just a click away.</p>
+                        <a href="consult.html"
+                            class="inline-block bg-navy text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-navy transition">
+                            Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-3xl font-serif font-bold text-navy mb-4">Stay updated with our legal insights</h3>
+                <p class="text-lg text-gray-700 mb-8">Subscribe to our newsletter for the latest articles and legal
+                    updates.</p>
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Your email address"
+                        class="flex-1 px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-gold">
+                    <button type="submit"
+                        class="bg-gold text-navy px-6 py-3 rounded-full font-semibold hover:bg-navy hover:text-white transition">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as improved professional footer) -->
+    <!-- Footer (same as improved professional footer) -->
+    <footer class="bg-navy text-white pt-12 pb-4 mt-8">
+        <div class="container mx-auto px-4">
+            <!-- Top border accent -->
+            <div class="w-24 h-1 bg-gold mb-8 mx-auto md:mx-0"></div>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Left: company name with logo -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <a href="index.html">
+                            <img src="images/MuddannaLlogo.webp" alt="Website Logo" class="logo">
+                        </a>
+                    </div>
+                <p class="text-sm text-gray-300 leading-relaxed">Trusted legal expertise since 2019.
+                </p>
+                <p class="text-sm text-gray-300 leading-relaxed">Civil cases and others.</p>
+                </div>
+    
+                <!-- Middle: quick links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold relative inline-block pb-2 footer-heading">Quick Links</h4>
+                    <ul class="space-y-2 text-sm mt-4">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link">About</a></li>
+                        <li><a href="practice.html" class="footer-link">Practice</a></li>
+                        <li><a href="our_team.html" class="footer-link">Team</a></li>
+                        <li><a href="cases.html" class="footer-link">Cases</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="FAQ.html" class="footer-link">Resources</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Right: contact info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold gold footer-heading inline-block mb-4">Get in touch</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start justify-center md:justify-start"><i
+                                class="fas fa-map-marker-alt gold mt-1 mr-3"></i>
+                            <span>Muddanna Associates,Muddanna Building, Sir M V Layout 7th Block,Muddayanapalya, Bengaluru,
+                                Karnataka-560091</span>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-phone-alt gold mr-3"></i> +91
+                            090606 43224</p>
+                        <p class="flex items-center justify-center md:justify-start"><i
+                                class="fas fa-envelope gold mr-3"></i>
+                            muddannaassociates@gmail.com</p>
+                        <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                            Monday - Saturday: 5:00PM- 9:00PM
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start"><i class="fas fa-clock gold mr-3"></i>
+                            Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Social links -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+    
+            <!-- Credit row -->
+            <div class="border-t border-gray-700 pt-6 text-center footer-credit">
+                <p>© 2025 Muddanna Associates. All Rights Reserved | Designed & Developed by <a
+                        href="https://www.webvistara.co.in/" target="_blank" class="hover:text-gold"
+                        style="color: #C5A059;">
+                        Web Vistara
+                    </a>
+                </p>
+    
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Disclaimer hidden page (for direct link) -->
+    <section id="disclaimer" style="display: none;">Disclaimer content same as modal.</section>
+
+    <script>
+        // Disclaimer functions
+        function acceptDisclaimer() {
+            document.getElementById('disclaimerModal').classList.add('disclaimer-hidden');
+            localStorage.setItem('disclaimerAccepted', 'true');
+        }
+        function showDisclaimer() {
+            document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+        }
+
+        // Check if disclaimer already accepted
+        window.onload = function () {
+            if (!localStorage.getItem('disclaimerAccepted')) {
+                document.getElementById('disclaimerModal').classList.remove('disclaimer-hidden');
+            }
+        };
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        function closeMobile() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+    </script>
+    <style>
+        .disclaimer-hidden {
+            display: none !important;
+        }
+
+        .footer-heading {
+            position: relative;
+        }
+    </style>
+</body>
+
+</html>
